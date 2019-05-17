@@ -1,0 +1,31 @@
+{
+  "name": "sourcebroker/installtool",
+  "type": "typo3-cms-extension",
+  "description": "Unlock the Install Tool and generate random password",
+  "license": [
+    "GPL-2.0+"
+  ],
+  "require": {
+    "typo3/cms-core": "^8.7 || ^9.5",
+    "helhum/typo3-console": "~1.1.9 || ~4.9.0 || ~5.5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "SourceBroker\\Installtool\\": "Classes/"
+    }
+  },
+  "replace": {
+    "installtool": "self.version",
+    "typo3-ter/installtool": "self.version"
+  },
+  "config": {
+    "vendor-dir": ".Build/vendor",
+    "bin-dir": ".Build/bin"
+  },
+  "extra": {
+    "typo3/cms": {
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "web-dir": ".Build/Web"
+    }
+  }
+}
